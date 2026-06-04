@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mmitchell2025\\Documents\\GitHub\\Pacman PT 1\\Pacman 1st game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28BBFD46-31DC-B7E1-7098-F50B3219D128}|Assembly-CSharp.csproj|c:\\users\\mmitchell2025\\documents\\github\\pacman pt 1\\pacman 1st game\\assets\\scripts\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28BBFD46-31DC-B7E1-7098-F50B3219D128}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player movement.cs",
+              "DocumentMoniker": "C:\\Users\\mmitchell2025\\Documents\\GitHub\\Pacman PT 1\\Pacman 1st game\\Assets\\Scripts\\Player movement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player movement.cs",
+              "ToolTip": "C:\\Users\\mmitchell2025\\Documents\\GitHub\\Pacman PT 1\\Pacman 1st game\\Assets\\Scripts\\Player movement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player movement.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T09:59:08.712Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
