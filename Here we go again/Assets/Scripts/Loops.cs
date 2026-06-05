@@ -11,6 +11,8 @@ public class Loops : MonoBehaviour
     public bool hasDelhi;
     public bool hasDubai;
     public int intelligence = 67;
+    public string leading;
+   
 
     public enum spacial
     {
@@ -45,6 +47,21 @@ public class Loops : MonoBehaviour
         Console.WriteLine(marathons[1]);
         Console.WriteLine(removed);
 
+        List<bool> b = new List<bool>();
+        List<IServiceProvider> i = new List<IServiceProvider>();
+
+        citiesList.Add("New York City");
+
+        foreach (string city in citiesList)
+        {
+            Console.WriteLine($"Welcome to...{city}!");
+        }
+        
+
+
+        
+
+
 
         
 
@@ -54,6 +71,7 @@ public class Loops : MonoBehaviour
         bool hasDubai = citiesList.Contains("Dubai");
         {
             Console.WriteLine("Speech imbedded");
+            Console.WriteLine("Speech encapsulated");
 
 
         }
