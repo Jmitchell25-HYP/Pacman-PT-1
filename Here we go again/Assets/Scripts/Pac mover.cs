@@ -4,10 +4,10 @@ using UnityEngine.Pool;
 
 public class Pacmover : MonoBehaviour
 {
-    private Rigidbody AX;
-    private float speed = 1;
-    private float movementX;
-    private float movementY;
+    public Rigidbody AX;
+    public float speed = 1;
+    public float movementX;
+    public float movementY;
     public bool Is_Able_To_Phase_Through;
     void Start()
     {
@@ -33,8 +33,11 @@ public class Pacmover : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         AX.AddForce(movement * speed);
+        string[] gameText = { "This will happen" };
 
     }
+
+    
 
 
 
