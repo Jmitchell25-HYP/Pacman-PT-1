@@ -3,22 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    
-    void Start()
-    {
-        Menu();
-    }
-
-    void Menu()
+    public void LoadScene()
     {
         SceneManager.LoadScene(1);
     }
-
-   
-    void Update()
-    {
-        
-    }
+    
 
 
 }

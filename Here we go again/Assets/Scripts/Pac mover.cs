@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Pool;
@@ -41,7 +42,8 @@ public class Pacmover : MonoBehaviour
         AX.AddForce(movement * speed);
         string[] gameText = { "This will happen" };
         double timeCounter = Math.Floor(ghostsSpawned / Time.deltaTime);
-       
+        List<int> ghosts = new List<int> { 1, 2, 3, 4, 5, 6 };
+     
       
 
 
