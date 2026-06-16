@@ -18,8 +18,9 @@ public class FirstPersonCamera : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {    // This checks how the cursor should behave
         Cursor.lockState = CursorLockMode.Locked;
+        // This determines if whether the hardware pointer is visbile or not
         Cursor.visible = false;
     }
 
@@ -32,6 +33,7 @@ public class FirstPersonCamera : MonoBehaviour
         yRotation += mouseX;
         // xRotation removes the assignment
         xRotation -= mouseY;
+        // Mathf.clamp clamps the given value between a range defined by the given minimum integer and maximum integer values.
         xRotation = Mathf.Clamp(xRotation, -90f, 90);
 
         // rotating cam and Orientation

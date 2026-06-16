@@ -2,38 +2,27 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Pool;
+
 
 public class Pacmover : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed;
+    public bool moveUP;
+    public bool moveDown;
+    public bool moveLeft;
+    public bool moveRight;
+
+    public bool wallUp;
+    public bool wallDown;
+    public bool wallLeft;
+    public bool wallRight;
     public Rigidbody AX;
-    public bool isPacMoving;
-    public float travelspeed = 3.5f;
-    public int ghostsEaten;
-    public bool isPacInvisible;
-    public int PowerUpTime = 8;
-    public int timeLasted;
 
-    public Transform orientation;
+    public float speed = 0.5f;
 
-    public float groundDrag;
-
-    [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask whatIsGround;
-    bool grounded;
-
-
-    float horizontalInput;
-    float verticalInput;
-
-    Vector3 moveDirection;
-
-    
-
-
+    public Vector3 Up;
+    public Vector3 Down;
+    public Vector3 Left;
+    public Vector3 Right;
 
 
 
@@ -42,71 +31,22 @@ public class Pacmover : MonoBehaviour
 
     void Start()
     {
+        Up = new Vector3(0, speed, 0);
+        Down = new Vector3(0, -speed, 0);
+        Right = new Vector3(speed, 0, 0);
+        Left = new Vector3(-speed, 0, 0);
         
-        AX = GetComponent<Rigidbody>();
-        AX.position = transform.position;
-        AX.freezeRotation = true;
-    
-    }
-
-    private void Update()
-    {
-        // This is for Ground Check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f );
-
-
-        MyInput();
-
-        //Handling Drag
-        if (grounded)
-            AX.linearDamping = groundDrag;
-        else
-            AX.linearDamping = 0;
 
 
     }
 
-    private void MyInput()
-    {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-    }
-
-    private void FixedUpdate()
-    {
-        MovePac();
-    }
-
-
-    private void MovePac()
-    {
-        // calculate movement direction
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
-        AX.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
-        MovePac();
-    }
-    
-
-
-
-   
-
-    void Amplifying()
+    void Update()
     {
 
+
+
+
+
+
     }
-
-    void PacMan()
-    {
-
-    }
-
-
-    
-
-
-
-
 }
