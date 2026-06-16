@@ -7,17 +7,18 @@ using UnityEngine.Pool;
 public class Pacmover : MonoBehaviour
 {   
     public Rigidbody AX;
-    public float speed = 1;
-    public float movementX;
-    public float movementY;
-    public bool ispowerUp;
-    int powerUpTime = 8;
-    public bool isGhostSpawned;
-    public int ghostsEaten = 0;
-    int ghostsSpawned = 6;
+    public int ghostsSpawned = 7;
+    public bool isPacMoving;
+    public float travelspeed = 3.5f;
+    
+     
+    
+
+  
    
     void Start()
     {
+        
         AX = GetComponent<Rigidbody>();
     }
 
@@ -27,44 +28,16 @@ public class Pacmover : MonoBehaviour
         
     }
 
-    private void Onmove(InputValue movementValue)
+    void Amplifying()
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-
-        movementX = movementVector.x;
-        movementY = movementVector.y;
 
     }
 
-    void FixedUpdate()
-    {   
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        AX.AddForce(movement * speed);
-        string[] gameText = { "This will happen" };
-        double timeCounter = Math.Floor(ghostsSpawned / Time.deltaTime);
-        List<int> ghosts = new List<int> { 1, 2, 3, 4, 5, 6 };
-     
-      
-
-
-    }
-
-    void Applied()
+    void PacMan()
     {
-        switch (powerUpTime)
-        {
-            case 1:
-                Console.WriteLine("Power up is Activated");
-                break;
-            case 2:
-                Console.WriteLine("Power is deactivated");
-                break;
 
-        }
-
-
-        
     }
+
 
     
 
