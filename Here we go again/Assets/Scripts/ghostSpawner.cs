@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ghostSpawner : MonoBehaviour
@@ -10,6 +11,9 @@ public class ghostSpawner : MonoBehaviour
     public float spawnTime;
     public Rigidbody LP;
     public float GhostMovement;
+    public GameObject spawner;
+
+
    
 
     public enum GhostColours
@@ -39,17 +43,31 @@ public class ghostSpawner : MonoBehaviour
     
     void Update()
     {   // These lines of code check if the spawn time is accurate
+
+        if (isSpawned)
+        {
+            
+
+        }
+
+
         if (spawnTime < 0)
         {
             Console.WriteLine("Spawn time is delayed!");
+            // The spawner starts off false as the GameObject activates or deactivates locally
+            spawner.SetActive(false);
+            spawnTime += Time.deltaTime;
+
         }
         else if (spawnTime > 0)
-        {
+        {   // Then it becomes true in the second if statement
             Console.WriteLine("Spawn time was too fast!");
+            spawner.SetActive(true);
         }
         else
-        {
+        {    //Then returns false in else
             Console.WriteLine("Spawn time is accurate!");
+            spawner.SetActive(false);
 
         }
 

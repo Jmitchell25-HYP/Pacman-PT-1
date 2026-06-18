@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class Pacmover : MonoBehaviour
@@ -16,7 +17,10 @@ public class Pacmover : MonoBehaviour
     public bool wallLeft;
     public bool wallRight;
     public Rigidbody AX;
+    public bool isMoving;
 
+    public int pacLives = 3;
+    public int ghostsConsumed;
     public float speed = 0.5f;
 
     public Vector3 Up;
@@ -43,7 +47,25 @@ public class Pacmover : MonoBehaviour
     void Update()
     {
 
+        float movementX = Input.GetAxis("Horizontal");
+        float movementY = Input.GetAxis("Vertical");
 
+        if (pacLives < 3)
+        {
+            Console.WriteLine("You Suck");
+            SceneManager.LoadScene(pacLives);
+            return;
+
+        }
+        else if (ghostsConsumed < 3)
+        {
+            Console.WriteLine("Eliminate more ghosts");
+            return;
+        }
+        else
+        {
+
+        }
 
 
 
