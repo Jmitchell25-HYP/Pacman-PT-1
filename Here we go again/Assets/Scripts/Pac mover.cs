@@ -63,11 +63,13 @@ public class Pacmover : MonoBehaviour
         else if (ghostsConsumed > 3)
         {
             Console.WriteLine("You've completed the game");
+            SceneManager.LoadScene(ghostsConsumed);
             return;
         }
         else
         {
-
+            Console.WriteLine("Three more ghosts to go");
+            
         }
 
 

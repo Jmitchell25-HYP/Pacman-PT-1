@@ -27,8 +27,8 @@ public class FirstPersonCamera : MonoBehaviour
     private void FixedUpdate()
     {
         // This is for the mouse Input
-        float mouseX = Input.GetAxisRaw("Horizontal") * Time.deltaTime * sensX;
-        float mouseY = Input.GetAxisRaw("Vertical") * Time.deltaTime   * sensY;
+        float mouseX = Input.GetAxisRaw("mouseX") * Time.deltaTime * sensX;
+        float mouseY = Input.GetAxisRaw("mouseY") * Time.deltaTime   * sensY;
         // yRotation adds the assignment
         yRotation += mouseX;
         // xRotation removes the assignment
