@@ -7,26 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class Pacmover : MonoBehaviour
 {
-    public bool moveUP;
-    public bool moveDown;
-    public bool moveLeft;
-    public bool moveRight;
-
-    public bool wallUp;
-    public bool wallDown;
-    public bool wallLeft;
-    public bool wallRight;
+    
+   
     public Rigidbody AX;
+    private float movementX;
+    private float movementY;
     public bool isMoving;
 
     public int pacLives = 3;
     public int ghostsConsumed;
-    public float speed = 0.5f;
+    public float speed = 0;
 
-    public Vector3 Up;
-    public Vector3 Down;
-    public Vector3 Left;
-    public Vector3 Right;
+    
 
 
 
@@ -35,20 +27,31 @@ public class Pacmover : MonoBehaviour
 
     void Start()
     {
-        Up = new Vector3(0, speed, 0);
-        Down = new Vector3(0, -speed, 0);
-        Right = new Vector3(speed, 0, 0);
-        Left = new Vector3(-speed, 0, 0);
-        
+        AX.GetComponent<Rigidbody>();
 
 
     }
 
+    void OnMove(InputValue movementValue)
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();
+        AX = GetComponent<Rigidbody>();
+        movementX = movementVector.x;
+        movementY = movementVector.y;
+    }
+
+    private void FixedUpdate()
+    {  Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        AX.AddForce(movement * speed);
+        AX.AddForce(movement);
+    }
+
+
+
     void Update()
     {
 
-        float movementX = Input.GetAxis("Horizontal");
-        float movementY = Input.GetAxis("Vertical");
+       
 
         if (pacLives < 3)
         {
@@ -57,9 +60,9 @@ public class Pacmover : MonoBehaviour
             return;
 
         }
-        else if (ghostsConsumed < 3)
+        else if (ghostsConsumed > 3)
         {
-            Console.WriteLine("Eliminate more ghosts");
+            Console.WriteLine("You've completed the game");
             return;
         }
         else
