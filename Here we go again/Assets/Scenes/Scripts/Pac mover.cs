@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 public class Pacmover : MonoBehaviour
@@ -16,9 +17,7 @@ public class Pacmover : MonoBehaviour
     private Animator anim;
     public Rigidbody MTX;
 
-
-
-
+  
 
 
 }
