@@ -6,6 +6,8 @@ TagManager:
   tags:
   - See wall
   - Yellow Ghost
+  - WhatisGround
+  - What isEnemy
   layers:
   - Default
   - TransparentFX
