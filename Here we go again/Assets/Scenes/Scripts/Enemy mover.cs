@@ -1,21 +1,27 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 public class Enemymover : MonoBehaviour
 {
-    public Transform targetObj;
+    public Transform player;
+    public NavMeshAgent agent;
   
 
     void Start()
     {
-
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
-    { targetObj.position = transform.position;
-        Transform.position = Vector3.MoveTowards(this.transform.position, targetObj.position, 10 * Time.deltaTime);
+    { 
+        if (player!= null)
+        {
+            agent.SetDestination(player.position);
+        }
+
     }
 
 }
