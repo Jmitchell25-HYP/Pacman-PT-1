@@ -7931,7 +7931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 0
-  sprintSpeed: 4
+  sprintSpeed: 7.5
   walkSpeed: 2
   mouseSensitivity: 100
   jumpHeight: 3
