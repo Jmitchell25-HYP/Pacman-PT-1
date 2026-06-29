@@ -29,13 +29,18 @@ public class Pacmover : MonoBehaviour
         winTextObject.SetActive(false);
     }
 
-    void SetScoreText()
+    void Update()
     {
-        scoreText.text = "Score: " + score.ToString();
         if (score >= 15)
         {
             winTextObject.SetActive(true);
         }
+    }
+
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString();
+
         
     }
 

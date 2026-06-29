@@ -320,8 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &84726783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,8 +1701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &417591775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,13 +2510,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640348862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6872362, y: -0.02645206, z: -0.106735, w: 0.7180629}
+  m_LocalRotation: {x: 0.6941488, y: 0.03984709, z: -0.042935506, w: 0.7174443}
   m_LocalPosition: {x: 24.76, y: 3.85, z: 65.7}
   m_LocalScale: {x: 16.579615, y: 3.8010585, z: 5.5576944}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 78.905, y: -73.698, z: -80.238}
+  m_LocalEulerAnglesHint: {x: 88.096, y: -4.196, z: -10.908}
 --- !u!114 &640348867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,8 +3175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1001 &819615738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3948,8 +3942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1001 &900203434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4628,8 +4620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &960104188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,8 +5527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &1072375172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6163,8 +6151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &1103737111
 GameObject:
   m_ObjectHideFlags: 0
@@ -11046,8 +11032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e303bbe277fbe44916e2b48861c0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  PlayerHealth: {fileID: 0}
 --- !u!1 &1942913266
 GameObject:
   m_ObjectHideFlags: 0
