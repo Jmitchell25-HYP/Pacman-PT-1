@@ -5,35 +5,29 @@ using TMPro;
 using UnityEngine.InputSystem;
 public class Pacmover : MonoBehaviour
 {
-    public float playerSpeed;
-    public float sprintSpeed = 4f;
-    public float walkSpeed = 2f;
-    public float mouseSensitivity = 3f;
-    public float jumpHeight = 3f;
-    public bool isMoving = false;
-    public bool isSprinting = false;
-    public float yRot;
-   
+    
 
     private Animator anim;
     public Rigidbody MTX;
     private int score;
     public TextMeshProUGUI scoreText;
     public GameObject winTextObject;
+    public GameObject pauseMenu;
+    private bool isPaused = false;
 
     void Start()
     {
         MTX = GetComponent<Rigidbody>();
         score = 0;
         SetScoreText();
-        winTextObject.SetActive(false);
+        winTextObject.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (score >= 15)
+        if (score >= 17)
         {
-            winTextObject.SetActive(true);
+            winTextObject.gameObject.SetActive(true);
         }
     }
 
@@ -42,6 +36,21 @@ public class Pacmover : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
 
         
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            if (!isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 
 
@@ -53,6 +62,25 @@ public class Pacmover : MonoBehaviour
             score++;
             SetScoreText();
         }
+
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+  
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
 
     }
 
