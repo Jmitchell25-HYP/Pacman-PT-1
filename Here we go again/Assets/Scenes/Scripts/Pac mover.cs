@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 public class Pacmover : MonoBehaviour
 {
-    
+   
 
     private Animator anim;
     public Rigidbody MTX;
@@ -20,19 +20,20 @@ public class Pacmover : MonoBehaviour
         MTX = GetComponent<Rigidbody>();
         score = 0;
         SetScoreText();
+        // Calls this false in the start function
         winTextObject.gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (score >= 17)
-        {
+        if (score >= 16)
+        {   // Calls this true in the Update function
             winTextObject.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (isPaused)
             {
@@ -52,6 +53,7 @@ public class Pacmover : MonoBehaviour
         
     }
 
+  
   
 
     private void OnTriggerEnter(Collider other)

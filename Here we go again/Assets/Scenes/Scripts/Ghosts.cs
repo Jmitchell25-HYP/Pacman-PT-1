@@ -19,14 +19,14 @@ public class Ghosts : MonoBehaviour
         }
         else
         {
-            Debug.Log("The player hasn't yet been destoryed");
+            Debug.Log("The player hasn't yet been destroyed");
             GhostCollsion = true;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-       
+      
     }
 
 
