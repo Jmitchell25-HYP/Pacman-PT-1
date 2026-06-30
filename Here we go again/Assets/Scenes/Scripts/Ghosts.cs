@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class Ghosts : MonoBehaviour
 {
@@ -24,10 +26,7 @@ public class Ghosts : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-      
-    }
+    
 
 
 
