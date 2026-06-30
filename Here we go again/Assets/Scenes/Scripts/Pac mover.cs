@@ -28,21 +28,13 @@ public class Pacmover : MonoBehaviour
         if (score >= 17)
         {
             winTextObject.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
-    }
 
-    void SetScoreText()
-    {
-        scoreText.text = "Score: " + score.ToString();
 
-        
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!isPaused)
+            if (isPaused)
             {
                 ResumeGame();
             }
@@ -53,6 +45,14 @@ public class Pacmover : MonoBehaviour
         }
     }
 
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString();
+
+        
+    }
+
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -68,8 +68,8 @@ public class Pacmover : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-
-        Time.timeScale = 0;
+        isPaused = false;
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -78,6 +78,7 @@ public class Pacmover : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        isPaused = true;
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;

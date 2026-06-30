@@ -10,6 +10,7 @@ TagManager:
   - Pacman
   - Pickups
   - PickUp
+  - Pac Man
   layers:
   - Default
   - TransparentFX
