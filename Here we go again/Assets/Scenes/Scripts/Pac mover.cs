@@ -15,7 +15,7 @@ public class Pacmover : MonoBehaviour
     public GameObject winTextObject;
     public GameObject pauseMenu;
     private bool isPaused = false;
-    bool dead = false;
+    
 
     void Start()
     {
@@ -89,6 +89,7 @@ public class Pacmover : MonoBehaviour
 
     }
 
- 
+    
+  
 
 }

@@ -1545,20 +1545,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc8d13b028ec7c45840145b1b0a901a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUP: 0
-  moveDown: 0
-  moveLeft: 0
-  moveRight: 0
-  wallUp: 0
-  wallDown: 0
-  wallLeft: 0
-  wallRight: 0
-  AX: {fileID: 1942913268}
-  speed: 0.5
-  Up: {x: 0, y: 0, z: 0}
-  Down: {x: 0, y: 0, z: 0}
-  Left: {x: 0, y: 0, z: 0}
-  Right: {x: 0, y: 0, z: 0}
+  MTX: {fileID: 0}
+  scoreText: {fileID: 0}
+  winTextObject: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!54 &1942913268
 Rigidbody:
   m_ObjectHideFlags: 0
