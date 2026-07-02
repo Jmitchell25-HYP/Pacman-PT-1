@@ -22,11 +22,22 @@ public class Ghosts : MonoBehaviour
         else
         {
             Debug.Log("The player hasn't yet been destroyed");
-            GhostCollsion = true;
+          
         }
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PAC MAN"))
+        {
+            Destroy(collision.gameObject);
+        }
+
+    }
+
+
+
+
 
 
 

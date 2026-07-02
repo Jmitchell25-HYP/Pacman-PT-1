@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class Pacmover : MonoBehaviour
 {
    
@@ -14,6 +15,7 @@ public class Pacmover : MonoBehaviour
     public GameObject winTextObject;
     public GameObject pauseMenu;
     private bool isPaused = false;
+    bool dead = false;
 
     void Start()
     {
@@ -87,6 +89,6 @@ public class Pacmover : MonoBehaviour
 
     }
 
-  
+ 
 
 }
