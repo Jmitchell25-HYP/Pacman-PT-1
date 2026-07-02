@@ -10789,6 +10789,7 @@ GameObject:
   - component: {fileID: 1942913275}
   - component: {fileID: 1942913278}
   - component: {fileID: 1942913279}
+  - component: {fileID: 1942913280}
   m_Layer: 0
   m_Name: Pac Man
   m_TagString: PAC MAN
@@ -10970,6 +10971,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 24
   MaxHealth: 35
+--- !u!114 &1942913280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942913266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479ea62d6702343479bed734b7c6de57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946170540
 GameObject:
   m_ObjectHideFlags: 0
