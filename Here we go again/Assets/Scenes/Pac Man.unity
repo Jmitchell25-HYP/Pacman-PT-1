@@ -10786,10 +10786,10 @@ GameObject:
   - component: {fileID: 1942913269}
   - component: {fileID: 1942913268}
   - component: {fileID: 1942913267}
-  - component: {fileID: 1942913275}
   - component: {fileID: 1942913278}
   - component: {fileID: 1942913279}
   - component: {fileID: 1942913280}
+  - component: {fileID: 1942913281}
   m_Layer: 0
   m_Name: Pac Man
   m_TagString: PAC MAN
@@ -10813,6 +10813,7 @@ MonoBehaviour:
   scoreText: {fileID: 984343062}
   winTextObject: {fileID: 1803620793}
   pauseMenu: {fileID: 1741449833}
+  moveSpeed: 5
 --- !u!54 &1942913268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10838,7 +10839,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 90
   m_CollisionDetection: 1
 --- !u!135 &1942913269
 SphereCollider:
@@ -10930,21 +10931,6 @@ Transform:
   - {fileID: 1150694331}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1942913275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942913266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9628bdf240de9a44a65de857c49c813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 451.7
-  moveSpeed: 6
-  playerCamera: {fileID: 1150694331}
 --- !u!114 &1942913278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10984,6 +10970,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScreenCanvas: {fileID: 0}
+--- !u!114 &1942913281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942913266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0609858f983fa5f4e9b41c714c719882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  moveSpeed: 10
+  playerCamera: {fileID: 1150694331}
+  sensX: 435
+  sensY: 435
 --- !u!1 &1946170540
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class Pacmover : MonoBehaviour
 {
-   
+ 
+
+
 
     private Animator anim;
     public Rigidbody MTX;
@@ -15,7 +17,24 @@ public class Pacmover : MonoBehaviour
     public GameObject winTextObject;
     public GameObject pauseMenu;
     private bool isPaused = false;
-    
+    private float movementX;
+    private float movementY;
+    public float speed = 1;
+
+    private void OnMove(InputValue movementValue)
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();
+
+        movementX = movementVector.x;
+        movementY = movementVector.y;
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        MTX.AddForce(movement * speed);
+    }
+
 
     void Start()
     {
@@ -24,6 +43,7 @@ public class Pacmover : MonoBehaviour
         SetScoreText();
         // Calls this false in the start function
         winTextObject.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -46,7 +66,13 @@ public class Pacmover : MonoBehaviour
                 PauseGame();
             }
         }
+        
+       
+        
+
     }
+
+    
 
     void SetScoreText()
     {
@@ -89,7 +115,8 @@ public class Pacmover : MonoBehaviour
 
     }
 
-    
-  
+   
+
+
 
 }
