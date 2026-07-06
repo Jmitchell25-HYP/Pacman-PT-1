@@ -6,7 +6,7 @@ public class Ghosts : MonoBehaviour
 {
     public Rigidbody A;
     bool GhostCollsion;
-    string text = "Pac Man is dead";
+ 
     void Start()
     {
         A = GetComponent<Rigidbody>();  
