@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 6b420a18812efd846ac1d686aba682d7
   - enabled: 1
-    path: Assets/Scenes/NEW SAVE.unity
+    path: Assets/Scenes/Pac Man.unity
     guid: fcb2eb7febbe7f84997cf961b8603ca3
   - enabled: 1
     path: Assets/Scenes/Death Screen.unity

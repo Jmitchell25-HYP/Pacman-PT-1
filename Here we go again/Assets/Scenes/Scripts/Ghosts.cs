@@ -6,6 +6,7 @@ public class Ghosts : MonoBehaviour
 {
     public Rigidbody A;
     bool GhostCollsion;
+    string text = "Pac Man is dead";
     void Start()
     {
         A = GetComponent<Rigidbody>();  
@@ -31,6 +32,7 @@ public class Ghosts : MonoBehaviour
         if (collision.gameObject.CompareTag("PAC MAN"))
         {
             Destroy(collision.gameObject);
+            Debug.Log("Pac Man has been killed");
         }
 
     }
