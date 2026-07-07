@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class Ghosts : MonoBehaviour
 {
     public Rigidbody A;
     bool GhostCollsion;
+ 
     void Start()
     {
         A = GetComponent<Rigidbody>();  
@@ -19,15 +22,24 @@ public class Ghosts : MonoBehaviour
         }
         else
         {
-            Debug.Log("The player hasn't yet been destoryed");
-            GhostCollsion = true;
+            Debug.Log("The player hasn't yet been destroyed");
+          
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-       
+        if (collision.gameObject.CompareTag("PAC MAN"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Pac Man has been killed");
+        }
+
     }
+
+
+
+
 
 
 

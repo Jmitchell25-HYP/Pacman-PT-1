@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class Pacmover : MonoBehaviour
 {
-    
+
+
+
+  
 
     private Animator anim;
     public Rigidbody MTX;
@@ -14,19 +18,27 @@ public class Pacmover : MonoBehaviour
     public GameObject winTextObject;
     public GameObject pauseMenu;
     private bool isPaused = false;
+    private float movementX;
+    private float movementY;
+    public float speed = 1;
+
+
+
 
     void Start()
     {
         MTX = GetComponent<Rigidbody>();
         score = 0;
         SetScoreText();
+        // Calls this false in the start function
         winTextObject.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        if (score >= 17)
-        {
+        if (score >= 16)
+        {   // Calls this true in the Update function
             winTextObject.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
@@ -43,7 +55,13 @@ public class Pacmover : MonoBehaviour
                 PauseGame();
             }
         }
+        
+       
+        
+
     }
+
+    
 
     void SetScoreText()
     {
@@ -52,6 +70,7 @@ public class Pacmover : MonoBehaviour
         
     }
 
+  
   
 
     private void OnTriggerEnter(Collider other)
@@ -84,5 +103,9 @@ public class Pacmover : MonoBehaviour
         Cursor.visible = true;
 
     }
+
+   
+
+
 
 }
