@@ -1,52 +1,35 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Mouse_Rotation : MonoBehaviour
 {
     [SerializeField] float mouseSensitivity = 100f;
-    [SerializeField] float moveSpeed = 5f;
+    float xRotation = 0f;
     [SerializeField] Transform playerCamera;
+    public Rigidbody rb;
+    public float movementSpeed = 5f;
 
-    private float xRotation = 0f;
-    private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        rb.freezeRotation = true;
-
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
-
-    void Update()
+    
+    private void FixedUpdate()
     {
-        // Mouse Look
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        var gamepad = Gamepad.current;
+       
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        if (gamepad.rightTrigger.wasPressedThisFrame)
+        {
+            
+        }
 
-        playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
-    }
+        Vector2 move = gamepad.leftStick.ReadValue();
+        Vector3 moveDir = transform.right * move.x + transform.forward * move.y;
+        rb.linearVelocity = new Vector3(moveDir.x * movementSpeed, rb.linearVelocity.y, moveDir .z * movementSpeed);    
 
-    void FixedUpdate()
-    {
-        // WASD Movement
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Vector3 moveDirection =
-            transform.right * horizontal +
-            transform.forward * vertical;
-
-        rb.linearVelocity = new Vector3(
-            moveDirection.x * moveSpeed,
-            rb.linearVelocity.y,
-            moveDirection.z * moveSpeed
-        );
     }
 }
  

@@ -32,7 +32,7 @@ public class Pacmover : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (isPaused)
             {
