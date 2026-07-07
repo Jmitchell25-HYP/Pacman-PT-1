@@ -10804,7 +10804,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942913266}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cc8d13b028ec7c45840145b1b0a901a, type: 3}
   m_Name: 
@@ -10813,7 +10813,7 @@ MonoBehaviour:
   scoreText: {fileID: 984343062}
   winTextObject: {fileID: 1803620793}
   pauseMenu: {fileID: 1741449833}
-  moveSpeed: 5
+  speed: 1
 --- !u!54 &1942913268
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10982,11 +10982,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0609858f983fa5f4e9b41c714c719882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  moveSpeed: 10
-  playerCamera: {fileID: 1150694331}
-  sensX: 435
-  sensY: 435
+  playerBody: {fileID: 1150694331}
+  Sensitivity: 0.1
+  moveSpeed: 5
 --- !u!1 &1946170540
 GameObject:
   m_ObjectHideFlags: 0
