@@ -35,11 +35,16 @@ public class MouseRotation : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 0;
     }
 
     private void OnEnable()
     {
         playerControls.Enable();
+        if (playerControls == null)
+        {
+
+        }
     }
 
     private void OnDisable()
