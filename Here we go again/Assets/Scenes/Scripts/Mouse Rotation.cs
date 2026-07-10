@@ -17,13 +17,14 @@ public class MouseRotation : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        
     }
 
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(-moveInput.x, 0, -moveInput.y);
-        transform.Translate(movement * -moveSpeed * -Time.deltaTime, Space.World);
-        rb.linearVelocity = new Vector2(-moveDirection.x * -moveSpeed, -moveDirection.y *- moveSpeed);
+        transform.Translate(movement * moveSpeed * -Time.deltaTime, Space.World);
+        rb.linearVelocity = new Vector2(-moveDirection.x * moveSpeed, -moveDirection.y * moveSpeed);
     }
 
     public void OnLook(InputValue value)
@@ -54,8 +55,8 @@ public class MouseRotation : MonoBehaviour
 
     void Update()
     {
-        float mouseX = lookInput.x * Sensitivity;
-        float mouseY = lookInput.y * Sensitivity;
+        float mouseX = -lookInput.x * Sensitivity;
+        float mouseY = -lookInput.y * Sensitivity;
 
         // Camera up / down
         xRotation -= mouseX;

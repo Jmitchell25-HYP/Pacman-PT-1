@@ -1,27 +1,40 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class DeathManager : MonoBehaviour
+public class DeathManager 
 {
-    public GameObject deathScreenCanvas;
+    [SerializeField] private GameObject deathScreenPanel;
+    
 
-    // Show the death screen
-    public void ShowDeathScreen()
-    {
-        deathScreenCanvas.SetActive(true);
-        //Pause the game
-        Time.timeScale = 1f;
+    private void Die()
+    { // Activate the Death Screen
+        deathScreenPanel.SetActive(true);
 
+        Time.timeScale = 0f;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
+
 
     public void RestartGame()
-    {
-        SceneManager.LoadScene(1);
+    { // Unpause time before reloading
+        Time.timeScale = 1f;
+        
+        // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Quitgame()
-    {
-        Application.Quit(1);
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
