@@ -21,9 +21,9 @@ public class MouseRotation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(moveInput.x, 0, moveInput.y);
-        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
-        rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        Vector3 movement = new Vector3(-moveInput.x, 0, -moveInput.y);
+        transform.Translate(movement * -moveSpeed * -Time.deltaTime, Space.World);
+        rb.linearVelocity = new Vector2(-moveDirection.x * -moveSpeed, -moveDirection.y *- moveSpeed);
     }
 
     public void OnLook(InputValue value)
